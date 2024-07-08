@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCB Team</title>
+    <link rel="icon" href="rcblogo.png" type="image/icon type">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #000000; /* RCB primary text color */
+        }
+        .header {
+            background-color: #c4132e; /* RCB primary color */
+            padding: 10px 20px; /* Smaller padding for a smaller header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .header img {
+            max-width: 80px; /* Smaller logo */
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between links */
+        }
+        .nav-left {
+            justify-content: flex-start;
+        }
+        .nav-right {
+            justify-content: flex-end;
+        }
+        .navigation a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-weight: bold; /* Bold text */
+            font-size: 1.1em; /* Increased font size */
+        }
+        .navigation a:hover {
+            background-color: #a10a23; /* Darker shade on hover */
+            font-size: 150%;
+        }
+        .category-nav {
+            background-color: #3d3b3b; /* RCB secondary color */
+            display: flex;
+            justify-content: flex-start; /* Align links to the left */
+            padding: 10px 0;
+        }
+        .category-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Space between links */
+        }
+        .category-nav a:hover {
+            background-color: #5c5c5c; /* Darker shade on hover */
+            font-size: 150%;
+        }
+        .main-content {
+            padding: 20px;
+            background-image: url('https://www.livemint.com/lm-img/img/2024/03/18/600x338/PTI03-17-2024-000351B-0_1710730204469_1710730223744.jpg'); /* Background image URL */
+            background-size: cover; /* Cover the entire container */
+            background-position: center; /* Center the background image */
+        }
+        .team-intro {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.3); /* Transparent black background */
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+        .team-intro h1 {
+            color: #ffffff; /* White text */
+        }
+        .players-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.611); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            backdrop-filter: blur(8px); /* Blur effect */
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #c4132e; /* RCB primary color */
+            margin: 10px 0;
+        }
+        .players-subgrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .player-card {
+            background-color: #ffffe0; /* Light yellow background */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 250px;
+            position: relative; /* Position relative for absolute positioning of description */
+            cursor: pointer; /* Cursor pointer for hover effect */
+        }
+        .player-card:hover
+        {
+            background-color: #f3b4a9;
+        }
+        .player-card img {
+            border-radius: 50%;
+            max-width: 250px;
+        }
+        .player-card:hover::after {
+            content: attr(data-description); /* Show description on hover */
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            color: white;
+            position: absolute;
+            bottom: 100%; /* Position above the card */
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            z-index: 1; /* Ensure it's above other elements */
+            pointer-events: none; /* Allow clicks to go through */
+        }
+        .player-card:hover
+        {
+            background-color: #c54444;
+        }
+        .footer {
+            background-color: #c4132e; /* RCB primary color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: auto;
+        }
+        .category-nav img
+        {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navigation nav-left">
+            <a href="index.html">Home</a>
+            <a href="#team">Team</a>
+            <a href="https://www.royalchallengers.com/news">News</a>
+        </div>
+        <img src="rcblogo.png" alt="Team Logo">
+        <div class="navigation nav-right">
+            <a href="https://www.instagram.com/rcbtweets/" target="_blank">Contact</a>
+            <a href="https://www.royalchallengers.com/" target="_blank">Official Site</a>
+        </div>
+    </div>
+
+    <nav class="navbar-inverse" style="position: sticky; top: 0%;z-index: 99999;">
+        <div class="category-nav collapse navbar-collapse sticky">
+            <a href="#wicket-keepers"><img src="gloves.png" alt="">  Wicket Keeper</a>
+            <a href="#batters"><img src="cricket-bat.png" alt="">  Batsman</a>
+            <a href="#all-rounders"><img src="cricket.png" alt="">  All-Rounder</a>
+            <a href="#bowlers"><img src="cricket-ball.png" alt="">  Bowlers</a>
+            
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="team-intro">
+            <h1>Royal Challengers Bangalore</h1>
+            <p>Welcome to the official page of the Royal Challengers Bangalore!</p>
+        </div>
+        <div class="players-grid">
+            <div id="wicket-keepers" class="section-title">Wicket Keeper</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Dynamic wicketkeeper, Explosive batsman">
+                    <img src="dineshkartik.png" alt="Dinesh Kartik">
+                    <h3>Dinesh Kartik</h3>
+                    <p>Wicket Keeper</p>
+                </div>
+            </div>
+            <div id="batters" class="section-title">Batsman</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Stylish left-hander, Power hitter">
+                    <img src="virat kohli.png" alt="Virat Kohli">
+                    <h3>Virat Kohli</h3>
+                    <p>Batsman(c)</p>
+                </div>
+                <div class="player-card" data-description="Young talent, Explosive batting">
+                    <img src="Faf.png" alt="Faf Du Plessis">
+                    <h3>Faf Du Plessis</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Experienced campaigner, Versatile batsman">
+                    <img src="Rajat.png" alt="Rajat Patidar">
+                    <h3>Rajat Patidar</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Experienced campaigner, Versatile batsman">
+                    <img src="chauhan.png" alt="Saurav Chauhan">
+                    <h3>Saurav Chauhan</h3>
+                    <p>Batsman</p>
+                </div>
+            </div>
+            <div id="all-rounders" class="section-title">All-Rounders</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Spin bowling all-rounder, Handy lower-order batsman">
+                    <img src="curran.png" alt="Tom Curran">
+                    <h3>Tom Curran</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Hard-hitting all-rounder, T20 specialist">
+                    <img src="mayank.png" alt="Mayank Dagar">
+                    <h3>Mayank Dagar</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Young talent, Exciting prospect">
+                    <img src="maxwell.png" alt="Glenn Maxwell">
+                    <h3>Glenn Maxwell</h3>
+                    <p>All-Rounder</p>
+                </div>
+            </div>
+            <div id="bowlers" class="section-title">Bowlers</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Experienced pacer, Yorker specialist">
+                    <img src="siraj.png" alt="Mohammed Siraj">
+                    <h3>Mohammed Siraj</h3>                    <p>Bowler</p>
+                </div>
+                <div class="player-card" data-description="Mystery spinner, Wicket-taker">
+                    <img src="topley.png" alt="Reece Topley">
+                    <h3>Reece Topley</h3>
+                    <p>Bowler</p>
+                </div>
+                <div class="player-card" data-description="Young speedster, Rising star">
+                    <img src="akashdeep.png" alt="Akash Deep">
+                    <h3>Akash Deep</h3>
+                    <p>Bowler</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Royal Challengers Bangalore. All rights reserved.
+    </div>
+</body>
+</html>

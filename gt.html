@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarat Titans Team</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="GToutline.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #0066b3; /* Gujarat Titans primary color */
+        }
+        .header {
+            background-color: #101029; /* Gujarat Titans yellow */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #0066b3; /* Gujarat Titans primary color */
+        }
+        .header img {
+            max-width: 80px;
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-left {
+            justify-content: flex-start;
+        }
+        .nav-right {
+            justify-content: flex-end;
+        }
+        .navigation a {
+            display: block;
+            color: #ffffff; /* Gujarat Titans primary color */
+            text-align: center;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .navigation a:hover {
+            background-color: #252c66;
+            font-size: 150%;
+        }
+        .category-nav {
+            background-color: #0066b3; /* Gujarat Titans blue */
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0;
+        }
+        .category-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+        .category-nav a:hover {
+            background-color: #003366;
+            font-size: 150%;
+        }
+        .main-content {
+            padding: 20px;
+            background-image: url('https://www.hindustantimes.com/ht-img/img/2023/05/04/1600x900/gt-2022_1683207872520_1683207876621.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .team-intro {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+        .team-intro h1 {
+            color: #ffffff;
+        }
+        .players-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.611);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #0066b3; /* Gujarat Titans primary color */
+            margin: 10px 0;
+        }
+        .players-subgrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .player-card {
+            background-color: #ffffe0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 250px;
+            position: relative;
+            cursor: pointer;
+        }
+        .player-card img {
+            border-radius: 50%;
+            max-width: 250px;
+        }
+        .player-card:hover::after {
+            content: attr(data-description);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .player-card:hover
+        {
+            background-color: #99c3fa;
+            
+        } 
+        .footer {
+            background-color: #0066b3; /* Gujarat Titans blue */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: auto;
+        }
+        .category-nav img
+        {
+            width: 25px;
+            height: 25px;
+        }
+        .imgc{
+            height:50%;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navigation nav-left">
+            <a href="index.html">Home</a>
+            <a href="#team">Team</a>
+            <a href="https://www.gujarattitansipl.com/news">News</a>
+        </div>
+        <img src="GToutline.png" alt="Team Logo">
+        <div class="navigation nav-right">
+            <a href="https://www.instagram.com/gujarattitans/" target="_blank">Contact</a>
+            <a href="https://www.gujarattitansipl.com/" target="_blank">Official Site</a>
+        </div>
+    </div>
+
+    <nav class="navbar-inverse" style="position: sticky; top: 0%;z-index: 99999;">
+        <div class="category-nav collapse navbar-collapse sticky">
+            <a href="#wicket-keepers"><img src="gloves.png" alt="">  Wicket Keeper</a>
+            <a href="#batters"><img src="cricket-bat.png" alt="">  Batsman</a>
+            <a href="#all-rounders"><img src="cricket.png" alt="">  All-Rounder</a>
+            <a href="#bowlers"><img src="cricket-ball.png" alt="">  Bowlers</a>
+            <a href="#trophies"><img src="trophy.png" alt="">  Trophies</a>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="team-intro">
+            <h1>Gujarat Titans</h1>
+            <p>Welcome to the official page of the Gujarat Titans!</p>
+        </div>
+        <div class="players-grid">
+            <div id="wicket-keepers" class="section-title">Wicket Keepers</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Young talent, Promising future">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/549.png" alt="Matthew Wade">
+                    <h3>Matthew Wade</h3>
+                    <p>Wicket Keeper</p>
+                </div>
+                <!-- Add more wicket keeper cards as needed -->
+            </div>
+            <div id="batters" class="section-title">Batsman</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Experienced campaigner, Solid technique">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/62.png" alt="Shubman Gill">
+                    <h3>Shubman Gill</h3>
+                    <p>Batsman(c)</p>
+                </div>
+                <div class="player-card" data-description="Aggressive batsman, Big hitter">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/128.png" alt="David Miller">
+                    <h3>David Miller</h3>
+                    <p>Batsman</p>
+                </div>
+                <!-- Add more batter cards as needed -->
+            </div>
+            <div id="all-rounders" class="section-title">All-Rounders</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Spin bowling all-rounder, Handy with bat">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/61.png" alt="Vijay Shankar">
+                    <h3>Vijay Shankar</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Fast bowling all-rounder, Hard-hitting lower order">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/127.png" alt="Darshan Nalkande">
+                    <h3>Darshan Nalkande</h3>
+                    <p>All-Rounder</p>
+                </div>
+              <div class="player-card" data-description="Spin bowling all-rounder, Handy with bat">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/974.png" alt="Abhinav Manohar">
+                    <h3>Abhinav Manohar</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Fast bowling all-rounder, Hard-hitting lower order">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/590.png" alt="Shahrukh Khan">
+                    <h3>Shahrukh Khan</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <!-- Add more all-rounder cards as needed -->
+            </div>
+            <div id="bowlers" class="section-title">Bowlers</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Swing bowler, Consistent line and length">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2023/47.png" alt="Mohammad Shami">
+                    <h3>Mohammad Shami</h3>
+                    <p>Bowler</p>
+                </div>
+                <div class="player-card" data-description="Left-arm spinner, Tricky variations">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/120.png" alt="Rahul Tewatia">
+                    <h3>Rahul Tewatia</h3>
+                    <p>Bowler</p>
+                </div>
+              <div class="player-card" data-description="Swing bowler, Consistent line and length">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/218.png" alt="Rashid Khan">
+                    <h3>ashid Khan</h3>
+                    <p>Bowler</p>
+                </div>
+                <div class="player-card" data-description="Left-arm spinner, Tricky variations">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/536.png" alt="Kartik Tyagi">
+                    <h3>Kartik Tyagi</h3>
+                    <p>Bowler</p>
+                </div>
+                <!-- Add more bowler cards as needed -->
+            </div>
+        </div>
+    </div>
+    <center>
+    <div id="myCarousel" class="carousel slide " data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators" id="trophies">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active ">
+            <img src="GT1.jpeg" alt="Los Angeles"  class="imgc">
+          </div>
+      
+          <div class="item ">
+            <img src="GT2.jpeg" alt="Chicago"  class="imgc">
+          </div>
+      
+          <div class="item" >
+            <img src="WhatsApp Image 2024-06-25 at 12.29.33 PM.jpeg" alt="New York" class="imgc">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </center>
+
+      <div>
+        <center>
+            <h3>GUJARAT TITANS HAS WON IPL CUP 1 TIME:2022
+            </h3>
+        </center>
+      </div>
+
+    <div class="footer">
+        &copy; 2024 Gujarat Titans. All rights reserved.
+    </div>
+</body>
+</html>

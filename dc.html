@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Capitals Team</title>
+    <link rel="icon" href="DCoutline.png">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light gray background */
+            color: #154b87; /* Dark blue text */
+        }
+        .header {
+            background-color: #154b87; /* Dark blue header background */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white; /* White text */
+        }
+        .header img {
+            max-width: 80px;
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-left {
+            justify-content: flex-start;
+        }
+        .nav-right {
+            justify-content: flex-end;
+        }
+        .navigation a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .navigation a:hover {
+            background-color: #0069b4; /* Darker blue on hover */
+            font-size: 150%;
+   
+        }
+        .category-nav {
+            background-color: #c20404; /* Dark blue category navigation */
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0;
+        }
+        .category-nav img
+        {
+            width: 25px;
+            height: 25px;
+        }
+        .category-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+        .category-nav a:hover {
+            background-color: #ee4848; /* Darker blue on hover */
+            font-size: 150%;
+        }
+       
+        .main-content {
+            padding: 20px;
+            background-image: url('https://imgeng.jagran.com/images/2024/05/07/article/image/FotoJet%20-%202024-05-07T234656.474-1715105824997.jpg'); /* Delhi Capitals background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .team-intro {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+        .team-intro h1 {
+            color: #ffffff;
+        }
+        .players-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #154b87;
+            margin: 10px 0;
+        }
+        .players-subgrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .player-card {
+            background-color: #f9f9f9; /* Light gray background for player cards */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 250px;
+            position: relative;
+            cursor: pointer;
+        }
+        .player-card img {
+            border-radius: 50%;
+            max-width: 250px;
+        }
+        .player-card:hover::after {
+            content: attr(data-description);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .player-card:hover
+        {
+            background-color: #86c7f5;
+            
+        } 
+        .footer {
+            background-color: #154b87;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header ">
+        <div class="navigation nav-left ">
+            <a href="index.html">Home</a>
+            <a href="#team">Team</a>
+            <a href="https://www.delhicapitals.in/news">News</a>
+        </div>
+        <img src="DCoutline.png" alt="Team Logo">
+        <div class="navigation nav-right">
+            <a href="https://www.instagram.com/delhicapitals/" target="_blank">Contact</a>
+            <a href="https://www.delhicapitals.in/" target="_blank">Official Site</a>
+        </div>
+    </div>
+    <nav class="navbar-inverse" style="position: sticky; top: 0%;z-index: 99999;">
+    <div class="category-nav collapse navbar-collapse sticky">
+        <a href="#wicket-keepers"><img src="gloves.png" alt="">  Wicket Keeper</a>
+        <a href="#batters"><img src="cricket-bat.png" alt="">  Batsman</a>
+        <a href="#all-rounders"><img src="cricket.png" alt="">  All-Rounder</a>
+        <a href="#bowlers"><img src="cricket-ball.png" alt="">  Bowlers</a>
+       
+    </div>
+</nav>
+    <div class="main-content">
+        <div class="team-intro">
+            <h1>Delhi Capitals</h1>
+            <p>Welcome to the official page of the Delhi Capitals!</p>
+        </div>
+
+        <div class="players-grid">
+            <div id="wicket-keepers" class="section-title">Wicket Keeper</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Cool-headed wicket keeper, Strategic captain">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/18.png" alt="Rishabh Pant">
+                    <h3>Rishabh Pant</h3>
+                    <p>Wicket Keeper(c)</p>
+                </div>
+            </div>
+
+            <div id="batters" class="section-title">Batsman</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Dynamic opener, Powerful striker">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/51.png" alt="Prithvi Shaw">
+                    <h3>Prithvi Shaw</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Experienced campaigner, Versatile batsman">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/214.png" alt="David Warner">
+                    <h3>David Warner</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Young talent, Middle-order specialist">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/3115.png" alt="Jake Fraser-Mcgurk">
+                    <h3>Jake Fraser-Mcgurk</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Stylish right-hander, T20 specialist">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/268.png" alt="Shai Hope">
+                    <h3>Shai Hope</h3>
+                    <p>Batsman</p>
+                </div>
+            </div>
+
+            <div id="all-rounders" class="section-title">All-Rounders</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Dynamic all-rounder, Explosive batting">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/110.png" alt="Axar Patel">
+                    <h3>Axar Patel</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Spin all-rounder, Handy with the bat">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/538.png" alt="Lalit Yadav">
+                    <h3>Lalit Yadav</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Young talent, Exciting prospect">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/40.png" alt="Mitchell Marsh">
+                    <h3>Mitchell Marsh</h3>
+                    <p>All-Rounder</p>
+                </div>
+            </div>
+
+            <div id="bowlers"
+            <div id="bowlers" class="section-title">Bowlers</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Express pace, Yorker specialist">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/548.png" alt="Pravin Dubey">
+                    <h3>Pravin Dubey</h3>
+                    <p>Bowler</p>
+                </div>
+             
+                <div class="player-card" data-description="Left-arm quick, Swing bowler">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/142.png" alt="Anrich Nortje">
+                    <h3>Anrich Nortje</h3>
+                    <p>Bowler</p>
+                </div>
+                <div class="player-card" data-description="Young talent, Rising star">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/50.png" alt="Ishant Sharma">
+                    <h3>Ishant Sharma</h3>
+                    <p>Bowler</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Delhi Capitals. All rights reserved.
+    </div>
+</body>
+</html>

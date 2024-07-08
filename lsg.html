@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucknow Super Giants Team</title>
+    <link rel="icon" href="LSGoutline.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #003366; /* Dark blue for Lucknow Super Giants */
+        }
+        .header {
+            background-color: #ffcc00; /* Yellow for Lucknow Super Giants */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #003366; /* Dark blue */
+        }
+        .header img {
+            max-width: 80px;
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-left {
+            justify-content: flex-start;
+        }
+        .nav-right {
+            justify-content: flex-end;
+        }
+        .navigation a {
+            display: block;
+            color: #003366; /* Dark blue */
+            text-align: center;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .navigation a:hover {
+            background-color: #ffe658;
+            font-size: 150%;
+        }
+        .category-nav {
+            background-color: #003366; /* Dark blue */
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0;
+        }
+        .category-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+        .category-nav a:hover {
+            background-color: #001a33; /* Darker blue */
+            font-size: 150%;
+        }
+        .main-content {
+            padding: 20px;
+            background-image: url('https://images.indianexpress.com/2022/05/GT-trophy.jpg'); /* Replace with actual image */
+            background-size: cover;
+            background-position: center;
+        }
+        .team-intro {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+        .team-intro h1 {
+            color: #ffffff;
+        }
+        .players-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.611);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #003366; /* Dark blue */
+            margin: 10px 0;
+        }
+        .players-subgrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .player-card {
+            background-color: #ffffe0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 250px;
+            position: relative;
+            cursor: pointer;
+        }
+        .player-card img {
+            border-radius: 50%;
+            max-width: 250px;
+        }
+        .player-card:hover::after {
+            content: attr(data-description);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .player-card:hover
+        {
+            background-color: #86c7f5;
+            
+        } 
+        .footer {
+            background-color: #003366; /* Dark blue */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: auto;
+        }
+        .category-nav img
+        {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navigation nav-left">
+            <a href="index.html">Home</a>
+            <a href="#team">Team</a>
+            <a href="https://www.lucknowsupergiants.in/news">News</a>
+        </div>
+        <img src="LSGoutline.png" alt="Team Logo">
+        <div class="navigation nav-right">
+            <a href="https://www.instagram.com/lucknowsupergiants/" target="_blank">Contact</a>
+            <a href="https://www.lucknowsupergiants.in/" target="_blank">Official Site</a>
+        </div>
+    </div>
+    <nav class="navbar-inverse" style="position: sticky; top: 0%;z-index: 99999;">
+        <div class="category-nav collapse navbar-collapse sticky">
+            <a href="#wicket-keepers"><img src="gloves.png" alt="">  Wicket Keeper</a>
+            <a href="#batters"><img src="cricket-bat.png" alt="">  Batsman</a>
+            <a href="#all-rounders"><img src="cricket.png" alt="">  All-Rounder</a>
+            <a href="#bowlers"><img src="cricket-ball.png" alt="">  Bowlers</a>
+           
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="team-intro">
+            <h1>Lucknow Super Giants</h1>
+            <p>Welcome to the official page of the Lucknow Super Giants!</p>
+        </div>
+
+        <div class="players-grid">
+            <div id="wicket-keepers" class="section-title">Wicket Keeper</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Dynamic wicketkeeper, Explosive batsman">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/19.png" alt="KL Rahul">
+                    <h3>KL Rahul</h3>
+                    <p>Wicket Keeper(c)</p>
+                </div>
+            </div>
+            <div id="batters" class="section-title">Batters</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Stylish left-hander, Power hitter">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/200.png" alt="Devdutt Padikkal">
+                    <h3>Devdutt Padikkal</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Young talent, Explosive batting">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/170.png" alt="Quintin De Kock">
+                    <h3>Quintin De Kock</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Experienced campaigner, Versatile batsman">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/136.png" alt="Nicholas Pooran">
+                    <h3>Nicholas Pooran</h3>
+                    <p>Batsman</p>
+                </div>
+                <div class="player-card" data-description="Experienced campaigner, Versatile batsman">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/86.png" alt="Ashton Turner">
+                    <h3>Ashton Turner</h3>
+                    <p>Batsman</p>
+                </div>
+            </div>
+            <div id="all-rounders" class="section-title">All-Rounders</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Spin bowling all-rounder, Handy lower-order batsman">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/17.png" alt="Krunal Pandya">
+                    <h3>Krunal Pandya</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Hard-hitting all-rounder, T20 specialist">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/215.png" alt="Deepak Hooda">
+                    <h3>Deepak Hooda</h3>
+                    <p>All-Rounder</p>
+                </div>
+                <div class="player-card" data-description="Young talent, Exciting prospect">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/23.png" alt="Marcus Stoinis">
+                    <h3>Marcus Stoinis</h3>
+                    <p>All-Rounder</p>
+                </div>
+            </div>
+            <div id="bowlers" class="section-title">Bowlers</div>
+            <div class="players-subgrid">
+                <div class="player-card" data-description="Experienced pacer, Yorker specialist">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/520.png" alt="Ravi Bishnoi">
+                    <h3>Ravi Bishnoi</h3>  
+                    <p>Bowler</p>
+                </div>
+                <div class="player-card" data-description="Mystery spinner, Wicket-taker">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/987.png" alt="Mayank Yadav">
+                    <h3>Mayank Yadav</h3>
+                    <p>Bowler</p>
+                </div>
+                <div class="player-card" data-description="Young speedster, Rising star">
+                    <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/71.png" alt="Matt Henry">
+                    <h3>Matt Henry</h3>
+                    <p>Bowler</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Lucknow Super Giants. All rights reserved.
+    </div>
+</body>
+</html>

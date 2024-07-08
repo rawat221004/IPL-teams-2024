@@ -1,0 +1,245 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up body styles */
+body {
+    background-color: #e0e0e0; /* Lightened background color */
+    background-size: cover;
+    background-position: center;
+    background-image: url('ipl.trophy.avif'); /* Default background image for desktop */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    scroll-behavior: smooth;
+}
+
+/* Adjust body background for mobile screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #ededed; /* Light gray background color similar to IPL teams page */
+    }
+}
+
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366;
+    color: white;
+    padding: 1em 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 40px; /* Adjust size for responsiveness */
+    margin-right: 5px; /* Add some space between logos */
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.center-logo {
+    width: 40px; /* Adjust size for responsiveness */
+    margin-bottom: 5px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 20px; /* Adjust size for responsiveness */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 20px; /* Adjust size for responsiveness */
+    margin-right: 10px;
+    color: lightgray;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: gray;
+    transform: translateY(-5px);
+}
+
+/* Main content section */
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Occupy remaining vertical space */
+    justify-content: space-between;
+}
+
+/* Teams section */
+#teams {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    gap: 10px; /* Gap between grid items */
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.team {
+    position: relative;
+    width: 120px; /* Adjusted width for responsiveness */
+    height: 120px; /* Adjusted height for responsiveness */
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.team img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the full area without distortion */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px; /* Reduced padding */
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 14px; /* Adjusted font size for responsiveness */
+    max-width: 100%; /* Ensure text doesn't overflow */
+}
+
+.team:hover img {
+    opacity: 0.3;
+}
+
+.team:hover .team-info {
+    opacity: 1;
+}
+
+.team h2 {
+    margin: 0;
+    font-size: 14px; /* Adjusted font size for responsiveness */
+}
+
+/* Footer sections */
+footer {
+    display: flex;
+    flex-direction: column;
+    background: #262626;
+    color: white;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Copyright section */
+.copyright {
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 300;
+    background: #262626;
+    color: white;
+}
+
+/* "Developed By" section */
+.made-by {
+    text-align: center;
+    padding: 10px 0;
+    background: #262626;
+    color: white;
+}
+
+.profile-pics {
+    margin-top: 5px; /* Adjusted margin */
+}
+
+.profile-pics a {
+    display: inline-block;
+    margin: 0 3px; /* Adjusted margin */
+    border-radius: 50%; /* Makes the images circular */
+    overflow: hidden;
+}
+
+.profile-pics img {
+    width: 50px; /* Default size of the profile pictures */
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Font Awesome icons */
+@import url('https://kit.fontawesome.com/70ba2e3e28.js');
+
+/* Image size adjustment for mobile devices */
+@media screen and (max-width: 768px) {
+    .logo-container img {
+        width: 30px; /* Adjust logo size for responsiveness */
+    }
+
+    .center-logo {
+        width: 30px; /* Adjust center logo size for responsiveness */
+    }
+
+    .header-title {
+        font-size: 16px; /* Adjust header title size for responsiveness */
+    }
+
+    .team {
+        width: 100%; /* Ensure teams take full width on smaller screens */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+
+    .team img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .profile-pics img {
+        width: 40px; /* Increase profile picture size for mobile */
+        height: 40px;
+    }
+}
+
+/* Responsive adjustments for tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #teams {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-rows: repeat(5, 1fr); /* 5 rows for tablets */
+    }
+
+    .team {
+        width: 160px; /* Increased width for tablets */
+        height: 160px; /* Increased height for tablets */
+    }
+
+    .team img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure images cover the full area without distortion */
+    }
+
+    .profile-pics img {
+        width: 60px; /* Increase profile picture size for tablets */
+        height: 60px;
+    }
+}
